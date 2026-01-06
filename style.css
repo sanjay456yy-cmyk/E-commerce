@@ -1,0 +1,258 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+#nav{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+#nav::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(202,83,14,0.65);
+    z-index: -1;
+}
+
+#logo img{
+    width: 90px;
+    height: 90px;
+}
+
+#nav ul{
+    display: flex;
+    margin-left: auto;
+}
+
+#nav ul li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+#nav ul li a{
+    text-decoration: none;
+    padding: 10px 14px;
+    background: rgb(165,31,31);
+    color: black;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#nav ul li a:hover{
+    background: white;
+}
+
+/* HOME */
+.home{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+    padding: 0 20px;
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(./image/eimg2.jpg.jpg) center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.h-primary{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(231,79,79);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: white;
+}
+
+/* SERVICES */
+.services{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.primary-center{
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+#service-bar{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.inner-ser{
+    width: 220px;
+    background: rgb(231,79,79);
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.inner-ser img{
+    height: 140px;
+    margin-bottom: 10px;
+}
+
+.inner-ser:hover{
+    background: white;
+    transform: scale(1.05);
+}
+
+/* PRODUCTS */
+#product-section{
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+#product-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url(./image/zix.jpg) center/cover no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item{
+    width: 170px;
+    height: 120px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-item img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CONTACT */
+.contact-section{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-form{
+    width: 420px;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: 1px solid #999;
+}
+
+.contact-form textarea{
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button{
+    padding: 12px;
+    border-radius: 25px;
+    background: #9c9c9c;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover{
+    background: #777;
+    color: white;
+}
+@media (max-width: 768px){
+
+  #nav{
+      flex-direction: column;
+  }
+
+  #nav ul{
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+  }
+
+  #nav ul li{
+      margin: 8px 0;
+  }
+
+  .home{
+      height: auto;
+      padding: 40px 15px;
+  }
+
+  .h-primary{
+      font-size: 24px;
+  }
+
+  #service-bar{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .inner-ser{
+      width: 90%;
+  }
+
+  .product-item{
+      width: 45%;
+  }
+
+  .contact-form{
+      width: 100%;
+      padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .product-item{
+      width: 90%;
+  }
+}
